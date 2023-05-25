@@ -27,7 +27,7 @@ export class ListagemRestauranteComponent implements OnInit {
   excluir(restaurante: Restaurante): void {
     this.restauranteService.remover(restaurante.id).subscribe(
       resposta => {
-        const indx = this.restaurantes.findIndex(r => r.id = restaurante.id);
+        const indx = this.restaurantes.findIndex(r => r.id === restaurante.id);
         if(indx > -1) {
           this.restaurantes.splice(indx, 1);
         }
