@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <button mat-icon-button [mat-menu-trigger-for]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/CadastrarRestaurantes']">Cadastro</button>
+    <button mat-menu-item [routerLink]="['/ListarRestaurantes']">Lista</button>
+  </mat-menu>
+  <h1> {{title}} </h1>
+  <!-- <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon>assignment</mat-icon>
+        Cadastro
+      </ng-template>
+      [routerLink]="['/CadastrarRestaurantes']"
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon>dashboard</mat-icon>
+        Lista
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group> -->
+</mat-toolbar>
+<router-outlet></router-outlet>
