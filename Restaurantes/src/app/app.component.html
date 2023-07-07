@@ -23,4 +23,14 @@
     </mat-tab>
   </mat-tab-group> -->
 </mat-toolbar>
-<router-outlet></router-outlet>
+<mat-sidenav-container style="height: 91.5%;">
+  <mat-sidenav #sidenav opened="true" mode="side">
+    <mat-nav-list>
+      <a class="side-lista" mat-list-item [routerLink]="['/ListarRestaurantes']"><mat-icon fontIcon="dashboard"></mat-icon><label class="side-label">    Lista</label></a>
+      <a mat-list-item [routerLink]="['/CadastrarRestaurantes']"><mat-icon fontIcon="edit"></mat-icon><label class="side-label">    Cadastro</label></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
